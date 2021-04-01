@@ -8,7 +8,11 @@
     <p>{{ item.data.summary }}
     <ul>
       <li><a href="{{ item.data.sourceURL }}">Source</a></li>
-      <li><a href="{{ item.url }}">Case Study</a></li>
+      {% if item.data.caseStudy %}
+      <li>
+        <a href="{{ item.url }}">Case Study</a>
+      </li>
+      {% endif %}
     </ul>
     {% endfor %}
   </div>
