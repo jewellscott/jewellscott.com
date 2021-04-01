@@ -1,20 +1,16 @@
 <a class="skip-link button" href="#main-content">Skip to content</a>
 <header role="banner" class="site-head">
   <div class="wrapper">
-    <a href="/" aria-label="Jewell Scott" class="site-head__logo">
+    <a href="/" aria-label="{{ site.name }}" class="site-head__logo">
       {% include "partials/logo.svg" %}
     </a>
     <nav aria-label="primary">
-      <ul>
+      <ul class="nav__list">
+        {% for item in navigation.items %}
         <li>
-          <a href="/">About</a>
+          <a href="{{ item.url }}" {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
         </li>
-        <li>
-          <a href="/blog">Blog</a>
-        </li>
-        <li>
-          <a href="/projects">Projects</a>
-        </li>
+        {% endfor %}
       </ul>
     </nav>
   </div>
