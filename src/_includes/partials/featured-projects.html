@@ -4,11 +4,11 @@
       {{ featuredProjects.title }}
     </h2>
     {% for item in collections.featuredProjects %}
-    <a href="{{ item.url }}" aria-label="See {{ item.data.title }}">{{ item.data.title }}</a>
+    <a href="{{ item.data.projectURL }}" aria-label="See {{ item.data.title }}">{{ item.data.title }}</a>
     <p>{{ item.data.summary }}
     <ul>
       <li><a href="{{ item.data.sourceURL }}">Source</a></li>
-      <li><a href="{{ item.data.caseStudyURL }}">Case Study</a></li>
+      <li><a href="{{ item.url }}">Case Study</a></li>
     </ul>
     {% endfor %}
   </div>

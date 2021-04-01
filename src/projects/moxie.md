@@ -1,7 +1,7 @@
 ---
 title: 'Moxie'
 summary: 'Your new favorite whimsical start page'
-sourceURL: '/'
-caseStudyURL: '/'
+projectURL: 'moxie.com'
+sourceURL: 'github.com'
 featured: true;
 ---
