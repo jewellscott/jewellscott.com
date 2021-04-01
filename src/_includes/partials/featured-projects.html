@@ -1,0 +1,16 @@
+<article class="featured-projects">
+  <div class="wrapper">
+    <h2>
+      {{ featuredProjects.title }}
+    </h2>
+    {% for item in collections.featuredProjects %}
+    <a href="{{ item.url }}" aria-label="See {{ item.data.title }}">{{ item.data.title }}</a>
+    <p>{{ item.data.summary }}
+    <ul>
+      <li><a href="{{ item.data.sourceURL }}">Source</a></li>
+      <li><a href="{{ item.data.caseStudyURL }}">Case Study</a></li>
+    </ul>
+    {% endfor %}
+  </div>
+  <div><a href="/projects/">See more projects</a></div>
+</article>
