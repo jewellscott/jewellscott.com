@@ -1,0 +1,13 @@
+{% extends "layouts/base.html" %} {% block content %}
+<article>
+  <h1>{{ intro.eyebrow }}</h1>
+  <h2>{{ intro.main }}</h2>
+  <p>Adipiscing aliquet urna, ornare urna. Amet id viverra dignissim leo. Porttitor non sit blandit consectetur rhoncus
+    duis tristique. Volutpat ultricies ac quis ullamcorper dictumst. Pretium viverra id donec arcu sem.
+    <br><br>
+    For more about what I’m up to right now, see <a href="/now.">/now</a>.
+  </p>
+  <a href="{{ intro.emailButtonURL }}" class="button">{{ intro.emailButtonText }}</a>
+  <a href="{{ intro.luckyButtonURL }}" class="button">{{ intro.luckyButtonText }}</a>
+</article>
+{% endblock %}
