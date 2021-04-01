@@ -1,0 +1,23 @@
+{
+  "name": "jewellscott.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jewellscott/jewellscott.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jewellscott/jewellscott.com/issues"
+  },
+  "homepage": "https://github.com/jewellscott/jewellscott.com#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}
