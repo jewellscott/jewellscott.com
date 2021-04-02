@@ -8,7 +8,9 @@
     For more about what I’m up to right now, see <a href="/now">/now</a>.
   </p>
   <a href="{{ intro.emailButtonURL }}" class="button">{{ intro.emailButtonText }}</a>
-  <a href="{{ intro.luckyButtonURL }}" class="button">{{ intro.luckyButtonText }}</a>
+  {% for item in collections.all | randomItem %}
+  <a href="{{ item.url }}" class="button">{{ intro.luckyButtonText }}</a>
+  {% endfor %}
   {% include "partials/featured-projects.html" %}
 </article>
 {% endblock %}

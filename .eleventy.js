@@ -10,6 +10,13 @@ module.exports = config => {
   config.addFilter('dateFilter', dateFilter);
   config.addFilter('w3DateFilter', w3DateFilter);
 
+  config.addFilter("randomItem", (arr) => {
+    arr.sort(() => {
+      return 0.5 - Math.random();
+    });
+    return arr.slice(0, 1);
+  });
+
   // Returns a collection of blog posts in reverse date order
   config.addCollection('blog', collection => {
   return [...collection.getFilteredByGlob('./src/blog/*.md')].reverse();
