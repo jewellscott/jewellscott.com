@@ -1,0 +1,17 @@
+<article class="latest-blog-posts">
+  <div class="wrapper">
+    <h2>
+      Latest Blog Posts
+    </h2>
+    <ul>
+      {% for item in collections.blog %}
+      <li>
+        <a href="{{ item.url }}">{{ item.data.title }}</a>
+        <br>
+        <time datetime="{{ page.date | w3DateFilter }}">{{ page.date | dateFilter }}</time>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div><a href="/blog/">Read more</a></div>
+</article>
