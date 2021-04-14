@@ -1,5 +1,5 @@
 ---
-title: Jewell Scott
+title: 'Jewell Scott'
 layout: 'layouts/home.html'
 intro: 
   eyebrow: "Hey! I'm Jewell."
