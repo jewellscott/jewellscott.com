@@ -1,8 +1,18 @@
+{% set previousBlog = collections.blog | getPreviousCollectionItem(page) %}
+{% set nextBlog = collections.blog | getNextCollectionItem(page) %}
+
+
+
 <article>
   <div class="wrapper">
     <h2>Hey! Thanks for reading.</h2>
     <p>Thoughts? Email me at <a href="mailto:hey@jewellscott.com">hey@jewellscott.com</a> / <a
         href="{{ site.url }}/feed.xml"> Subscribe via
         RSS</a></p>
+    <section>
+      {% if previousBlog %} ← <a href="{{ previousBlog.url }}">{{ previousBlog.data.title }}</a>{% endif %}
+      <br>
+      {% if nextBlog %}<a href="{{ nextBlog.url }}">{{ nextBlog.data.title }}</a> →{% endif %}
+    </section>
   </div>
 </article>
