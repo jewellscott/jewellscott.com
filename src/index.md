@@ -8,4 +8,5 @@ intro:
   emailButtonURL: 'mailto:hey@jewellscott.com'
   luckyButtonText: "I'm feeling lucky"
   luckyButtonURL: '/lucky'
+metaDesc: 'The personal site and online homepage of Jewell Scott'
 ---
