@@ -5,7 +5,7 @@ projectURL: 'jewellscott.com'
 sourceURL: 'github.com'
 featured: true
 caseStudy: true
-heroImage: '../images/jewellscott.png'
+screenshot: '/images/jewellscott.png'
 displayOrder: 1
 ---
 # Phasellus maximus ac odio eget tincidunt
