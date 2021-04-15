@@ -3,7 +3,7 @@ title: 'Blog'
 layout: 'layouts/feed.html'
 pagination:
   data: collections.blog
-  size: 10
+  size: 15
 permalink: 'blog{% if pagination.pageNumber > 0 %}/page/{{ pagination.pageNumber }}{% endif %}/index.html'
 paginationPrevText: 'Previous'
 paginationNextText: 'Next'
