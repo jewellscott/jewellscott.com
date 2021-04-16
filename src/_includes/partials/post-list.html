@@ -10,7 +10,7 @@
       <li>
         <a href="{{ item.url }}">{{ item.data.title }}</a>
         <br>
-        <time datetime="{{ item.date | w3DateFilter }}">{{ item.date | readableDateFilter }}</time>
+        <time datetime="{{ item.date }}">{{ item.date }}</time>
       </li>
       {% endfor %}
     </ul>
