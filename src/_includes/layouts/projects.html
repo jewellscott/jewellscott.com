@@ -15,8 +15,14 @@
       <figcaption>
         <h2>{{ item.data.title }}</h2>
         <p>{{ item.data.summary }}</p>
-        <p><a href="{{ item.data.projectURL }}">PROJECT</a> / <a href="{{ item.data.sourceURL }}">SOURCE</a> / <a
-            href="{{ item.url }}">CASE STUDY</a> </p>
+        <ul>
+          <li><a href="{{ item.data.sourceURL }}">Source</a></li>
+          {% if item.data.caseStudy %}
+          <li>
+            <a href="{{ item.url }}">Case Study</a>
+          </li>
+          {% endif %}
+        </ul>
       </figcaption>
     </figure>
     {% endfor %}
