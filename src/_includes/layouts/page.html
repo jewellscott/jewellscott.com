@@ -7,7 +7,7 @@
 <article>
   {% include "partials/page-header.html" %}
   <p>Last updated on <time datetime="{{ page.date | w3DateFilter }}">{{ page.date |
-      dateFilter }}</time>
+      readableDateFilter }}</time>
   </p>
   {{ content | safe }}
 </article>
