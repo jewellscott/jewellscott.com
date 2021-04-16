@@ -10,7 +10,7 @@
       <li>
         <a href="{{ item.url }}">{{ item.data.title }}</a>
         <br>
-        <time datetime="{{ item.date }}">{{ item.date }}</time>
+        <time datetime="{{ item.date }}">{{ item.date | toUTCString }}</time>
       </li>
       {% endfor %}
     </ul>

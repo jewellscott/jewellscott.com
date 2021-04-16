@@ -1,18 +1,21 @@
 const rssPlugin = require('@11ty/eleventy-plugin-rss');
 const fs = require("fs");
-
-
-// Filters
-const readableDateFilter = require('./src/filters/readable-date-filter.js');
-const w3DateFilter = require('./src/filters/w3-date-filter.js');
+const moment = require("moment");
 
 const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js');
 
 module.exports = config => {
 
-// Add filters
-  config.addFilter('readableDateFilter', readableDateFilter);
-  config.addFilter('w3DateFilter', w3DateFilter);
+  // Filters
+  config.addFilter('toUTCString', (date) => {
+    const utc = date.toUTCString();
+    return moment.utc(utc).format("LL");  
+  })
+
+  config.addFilter('noUTC', (date) => {
+    return moment(date).format("LL");  
+  })
+
 
   // Plugins
 config.addPlugin(rssPlugin);
