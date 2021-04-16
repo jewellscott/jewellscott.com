@@ -6,7 +6,7 @@
 {% block content %}
 <article>
   {% include "partials/page-header.html" %}
-  <p>Last updated on <time datetime="{{ page.date | w3DateFilter }}">{{ page.date.toString() |
+  <p>Last updated on <time datetime="{{ page.date | w3DateFilter }}">{{ page.date |
       dateFilter }}</time>
   </p>
   {{ content | safe }}
