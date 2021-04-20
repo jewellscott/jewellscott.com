@@ -6,8 +6,7 @@
     <div>
       <ul>
         <!-- Complicated displayOrder logic. Sorry mate -->
-        {% for project in projects.projects | sort(false, false, "displayOrder") %}
-        {% set displayOrder = project.displayOrder %}
+        {% for project in projectlist | sort(false, false, "displayOrder") %}
         {% set project = projects[project.project] %}
         <!-- The actual templating -->
         <li>
@@ -31,4 +30,5 @@
       <a href="/projects/">See more projects</a>
     </div>
   </div>
+
 </article>
