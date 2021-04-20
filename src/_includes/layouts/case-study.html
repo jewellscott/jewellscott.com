@@ -2,16 +2,15 @@
 {% set pageHeaderTitle = title %}
 {% block content %}
 <article>
-  {{ project }}
-  {{ projects.simgodonline.title }}
-  {{ projects.{{ project }}.data.title }}
+  <h1>Case Study: {{ projects[project].title }}</h1>
   <figure>
-    <h1>Case Study: {{ projects.project.title }}</h1>
-    <p>{{ projects.project.summary }} </p>
-    <p><a href="{{ projects.project.projectURL }}">PROJECT</a> / <a href="{{ projects.project.sourceURL }}">SOURCE</a>
-    </p>
+    <img src="{{ screenshot }}" alt="A screenshot of {{ projects[project].title  }}" />
+    <p>{{ projects[project].summary }} </p>
     </figcaption>
   </figure>
+  <p>
+    <a href="{{ projects[project].projectURL }}">PROJECT</a> / <a href="{{ projects[project].sourceURL }}">SOURCE</a>
+  </p>
   {{ content | safe }}
 </article>
 {% endblock %}
