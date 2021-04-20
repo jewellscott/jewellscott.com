@@ -9,6 +9,7 @@
         {% for project in projectlist | sort(false, false, "displayOrder") %}
         {% set project = projects[project.project] %}
         <!-- The actual templating -->
+        {% if project.featured %}
         <li>
           <h3>
             <a href="project.projectURL" aria-label="See {{ project.title }}">{{project.title}}</a>
@@ -20,6 +21,7 @@
             <li>
               <a href="{{ project.CaseStudyURL }}">Case Study</a>
             </li>
+            {% endif %}
             {% endif %}
           </ul>
         </li>
