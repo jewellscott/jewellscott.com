@@ -2,8 +2,6 @@ const rssPlugin = require('@11ty/eleventy-plugin-rss');
 const fs = require("fs");
 const moment = require("moment");
 
-const sortByDisplayOrder = require('./src/utils/sort-by-display-order.js');
-
 module.exports = config => {
 
   // Filters
