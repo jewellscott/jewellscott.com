@@ -1,8 +1,7 @@
 {
   "title": "Moxie",
-  "summary": "Your new favorite whimsical start page / DISPLAY ORDER 3",
+  "summary": "Your new favorite whimsical start page",
   "projectURL": "moxie.com",
   "sourceURL": "github.com",
-  "featured": true, 
-  "displayOrder": 3
+  "featured": true
 }
