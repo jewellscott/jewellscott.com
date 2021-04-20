@@ -1,0 +1,25 @@
+<article class="featured-projects">
+  <div class="wrapper">
+    <h2>
+      Featured Projects
+    </h2>
+    {% for key, val in projects %}
+    {% if val.featured %}
+    <article>
+      <a href="{{ val.projectURL }}" aria-label="See {{ val.title }}">{{ val.title }}</a>
+      <p>{{ val.summary }}
+      <ul>
+        <li><a href="{{ val.projectURL }}">View project</a></li>
+        <li><a href="{{ val.sourceURL }}">Source</a></li>
+        {% if val.caseStudyURL %}
+        <li>
+          <a href="{{ val.caseStudyURL }}">Case Study</a>
+        </li>
+        {% endif %}
+    </article>
+    {% endif %}
+    {% endfor %}
+  </div>
+
+  <div><a href="/projects/">See more projects</a></div>
+</article>

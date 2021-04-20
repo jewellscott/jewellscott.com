@@ -50,7 +50,7 @@ config.addPlugin(rssPlugin);
   config.addCollection('blog', collection => {
   return [...collection.getFilteredByGlob('./src/blog/*.md')].reverse();
   });
-
+  
 // Set directories to pass through to the dist folder
 config.addPassthroughCopy('./src/images/');
   
