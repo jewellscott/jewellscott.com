@@ -5,7 +5,6 @@
   "projectURL": "jewellscott.com",
   "sourceURL": "github.com",
   "featured": true,
-  "caseStudy": true,
-  "screenshot": "/images/jewellscott.png",
+  "caseStudyURL": true,
   "displayOrder": 1
 }

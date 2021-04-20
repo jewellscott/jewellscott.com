@@ -1,0 +1,30 @@
+{% extends "layouts/base.html" %}
+
+{% set pageHeaderTitle = title %}
+{% set pageHeaderSummary = summary %}
+
+{% block content %}
+<article>
+  {% include "partials/page-header.html" %}
+</article>
+<div class="wrapper">
+  <article>
+    {% for key, val in projects %}
+    <figure>
+      <figcaption>
+        <h2><a href="val.projectURL">{{ val.title }}</a></h2>
+        <p>{{ val.summary }}</p>
+        <ul>
+          <li><a href="{{ val.sourceURL }}">Source</a></li>
+          {% if val.caseStudyURL %}
+          <li>
+            <a href="{{ val.caseStudyURL }}">Case Study</a>
+          </li>
+          {% endif %}
+        </ul>
+      </figcaption>
+    </figure>
+    {% endfor %}
+  </article>
+</div>
+{% endblock %}
