@@ -1,0 +1,17 @@
+{% extends "layouts/base.html" %}
+{% set pageHeaderTitle = title %}
+{% block content %}
+<article>
+  {{ project }}
+  {{ projects.simgodonline.title }}
+  {{ projects.{{ project }}.data.title }}
+  <figure>
+    <h1>Case Study: {{ projects.project.title }}</h1>
+    <p>{{ projects.project.summary }} </p>
+    <p><a href="{{ projects.project.projectURL }}">PROJECT</a> / <a href="{{ projects.project.sourceURL }}">SOURCE</a>
+    </p>
+    </figcaption>
+  </figure>
+  {{ content | safe }}
+</article>
+{% endblock %}
