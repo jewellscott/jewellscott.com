@@ -2,6 +2,5 @@
   "title": "This is a project that isn't featured",
   "summary": "My personal site, built with 11ty",
   "projectURL": "jewellscott.com",
-  "sourceURL": "github.com",
-  "caseStudyURL": true
+  "sourceURL": "github.com"
 }
