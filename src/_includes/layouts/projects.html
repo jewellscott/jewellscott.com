@@ -11,8 +11,9 @@
   <article>
     {% for key, val in projects %}
     <figure>
+      <img src="{{ val.screenshot }}" />
       <figcaption>
-        <h2><a href="val.projectURL">{{ val.title }}</a></h2>
+        <h2><a href="{{ val.projectURL }}">{{ val.title }}</a></h2>
         <p>{{ val.summary }}</p>
         <ul>
           <li><a href="{{ val.sourceURL }}">Source</a></li>
