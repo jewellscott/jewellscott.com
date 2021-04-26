@@ -3,5 +3,6 @@
   "summary": "My personal site, built with 11ty",
   "projectURL": "jewellscott.com",
   "sourceURL": "github.com",
-  "caseStudyURL": true
+  "caseStudyURL": true,
+  "screenshot": "/images/projects/jewellscottcom.png"
 }
