@@ -1,6 +1,5 @@
 ---
 title: 'Projects'
+summary: 'This is a cute little blurb on the projects or whatever... or what have you....'
 layout: 'layouts/projects.html'
 ---
-
-This is an even more lovely short blurb on the subject, which is going to be longer than the title.

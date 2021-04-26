@@ -3,18 +3,32 @@
     <h2>
       Featured Projects
     </h2>
-    {% for item in collections.featuredProjects %}
-    <a href="{{ item.data.projectURL }}" aria-label="See {{ item.data.title }}">{{ item.data.title }}</a>
-    <p>{{ item.data.summary }}
-    <ul>
-      <li><a href="{{ item.data.sourceURL }}">Source</a></li>
-      {% if item.data.caseStudy %}
-      <li>
-        <a href="{{ item.url }}">Case Study</a>
-      </li>
-      {% endif %}
-    </ul>
-    {% endfor %}
+    <div>
+      <ul>
+        <!-- Complicated displayOrder logic. Sorry mate -->
+        {% for project in featuredprojects | sort(false, false, "displayOrder") %}
+        {% set project = projects[project.project] %}
+        <!-- The actual templating -->
+        <li>
+          <h3>
+            <a href="{{ project.projectURL }}" aria-label="See {{ project.title }}">{{project.title}}</a>
+          </h3>
+          <p>{{ project.summary }}</p>
+          <ul>
+            <li><a href="{{ project.sourceURL }}">Source</a></li>
+            {% if project.caseStudyURL %}
+            <li>
+              <a href="{{ project.CaseStudyURL }}">Case Study</a>
+            </li>
+            {% endif %}
+          </ul>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div>
+      <a href="/projects/">See more projects</a>
+    </div>
   </div>
-  <div><a href="/projects/">See more projects</a></div>
+
 </article>

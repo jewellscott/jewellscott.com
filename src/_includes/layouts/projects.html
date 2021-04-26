@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %}
 
 {% set pageHeaderTitle = title %}
-{% set pageHeaderSummary = content %}
+{% set pageHeaderSummary = summary %}
 
 {% block content %}
 <article>
@@ -9,17 +9,17 @@
 </article>
 <div class="wrapper">
   <article>
-    {% for item in collections.projects %}
+    {% for key, val in projects %}
     <figure>
-      <img src="{{ item.data.screenshot }}" alt="A screenshot of {{ item.data.title }}" />
+      <img src="{{ val.screenshot }}" />
       <figcaption>
-        <h2>{{ item.data.title }}</h2>
-        <p>{{ item.data.summary }}</p>
+        <h2><a href="{{ val.projectURL }}">{{ val.title }}</a></h2>
+        <p>{{ val.summary }}</p>
         <ul>
-          <li><a href="{{ item.data.sourceURL }}">Source</a></li>
-          {% if item.data.caseStudy %}
+          <li><a href="{{ val.sourceURL }}">Source</a></li>
+          {% if val.caseStudyURL %}
           <li>
-            <a href="{{ item.url }}">Case Study</a>
+            <a href="{{ val.caseStudyURL }}">Case Study</a>
           </li>
           {% endif %}
         </ul>

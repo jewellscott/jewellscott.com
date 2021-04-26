@@ -1,0 +1,16 @@
+{% extends "layouts/base.html" %}
+{% set pageHeaderTitle = title %}
+{% block content %}
+<article>
+  <h1>Case Study: {{ projects[project].title }}</h1>
+  <figure>
+    <img src="{{ projects[project].screenshot }}" alt="A screenshot of {{ projects[project].title  }}" />
+    <p>{{ projects[project].summary }} </p>
+    </figcaption>
+  </figure>
+  <p>
+    <a href="{{ projects[project].projectURL }}">PROJECT</a> / <a href="{{ projects[project].sourceURL }}">SOURCE</a>
+  </p>
+  {{ content | safe }}
+</article>
+{% endblock %}
