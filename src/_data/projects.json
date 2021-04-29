@@ -1,0 +1,28 @@
+{
+  "moxie": {
+    "title": "Moxie",
+    "summary": "Your new favorite whimsical start page",
+    "projectURL": "https://google.com",
+    "sourceURL": "https://github.com"
+  },
+  "newproject": {
+    "title": "This is a project that isn't featured",
+    "summary": "My personal site, built with 11ty",
+    "projectURL": "https://google.com",
+    "sourceURL": "https://github.com"
+  },
+  "simgodonline": {
+    "title": "simgod.online",
+    "summary": "A multi-use generator for The Sims 4",
+    "projectURL": "https://google.com",
+    "sourceURL": "https://github.com"
+  },
+  "jewellscottcom": {
+    "title": "jewellscott.com",
+    "summary": "My personal site, built with 11ty",
+    "projectURL": "https://google.com",
+    "sourceURL": "https://github.com",
+    "caseStudyURL": "/blog",
+    "screenshot": "/images/projects/jewellscottcom.png"
+  }
+}
