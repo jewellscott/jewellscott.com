@@ -1,0 +1,5 @@
+.site-foot {
+  display: grid;
+  grid-gap: var(rem);
+  grid-template-columns: repeat(auto-fit, minmax(var(15ch), 1fr));
+}
