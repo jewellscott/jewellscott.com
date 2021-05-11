@@ -13,8 +13,10 @@
 
 <body>
   {% include "partials/site-head.html" %}
-  <main tabindex="-1" id="main-content">{% block content %}{% endblock %}</main>
+  <main tabindex="-1" id="main-content">
+    {% block content %}{% endblock %}
+  </main>
+  {% include "partials/site-foot.html" %}
 </body>
-<!-- {% include "partials/site-foot.html" %} -->
 
 </html>

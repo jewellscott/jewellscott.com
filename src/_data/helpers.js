@@ -19,5 +19,10 @@ module.exports = {
     }
 
     return response;
-  }
+  },
+ // dynamic footer date
+ currentYear() {
+  const today = new Date();
+  return today.getFullYear();
+}
 };
